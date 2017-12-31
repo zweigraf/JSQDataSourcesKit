@@ -38,6 +38,7 @@ where CellFactory.Item == DataSource.Item, SupplementaryFactory.Item == DataSour
 
     fileprivate var bridgedDataSource: BridgedDataSource?
     fileprivate var _tableEditingController: TableEditingController?
+    fileprivate var _tableReorderController: TableReorderController?
 
     // MARK: Initialization
 
@@ -83,6 +84,16 @@ public extension DataSourceProvider where CellFactory.View: UITableViewCell {
         }
     }
 
+    /// The table editing controller for this data source provider.
+    public var tableReorderController: TableReorderController? {
+        set {
+            _tableReorderController = newValue
+        }
+        get {
+            return _tableReorderController
+        }
+    }
+
     private func tableViewBridgedDataSource() -> BridgedDataSource {
         let dataSource = BridgedDataSource(
             numberOfSections: { [unowned self] () -> Int in
@@ -112,6 +123,15 @@ public extension DataSourceProvider where CellFactory.View: UITableViewCell {
 
         dataSource.tableCommitEditingStyleForRow = { [unowned self] (tableView, editingStyle, indexPath) in
             self.tableEditingController?.commitEditing(tableView, editingStyle, indexPath)
+        }
+
+        dataSource.tableCanMoveRow = { [unowned self] (tableView, indexPath) in
+            guard let controller = self.tableReorderController else { return false }
+            return controller.canMoveRow(tableView, indexPath)
+        }
+
+        dataSource.tableMoveRow = { [unowned self] (tableView, sourceIndexPath, destinationIndexPath) in
+            self.tableReorderController?.moveRow(tableView, sourceIndexPath, destinationIndexPath)
         }
 
         return dataSource
@@ -158,7 +178,8 @@ public extension DataSourceProvider where CellFactory.View: UICollectionViewCell
                                                                   collectionView: collectionView,
                                                                   indexPath: indexPath)
         }
-        
+
         return dataSource
     }
 }
+

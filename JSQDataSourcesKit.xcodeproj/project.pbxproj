@@ -44,6 +44,7 @@
 		88DCAD821CB87CC900C018AF /* SectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DCAD421CB87CB400C018AF /* SectionTests.swift */; };
 		88DCAD841CB87CC900C018AF /* TitledSupplementaryViewFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DCAD441CB87CB400C018AF /* TitledSupplementaryViewFactoryTests.swift */; };
 		88DCAD851CB87CC900C018AF /* TitledSupplementaryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DCAD451CB87CB400C018AF /* TitledSupplementaryViewTests.swift */; };
+		A5CC19DC1FF9AE6E00DB7EE8 /* TableReorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC19D91FF9AE6E00DB7EE8 /* TableReorderController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		88DCAD421CB87CB400C018AF /* SectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTests.swift; sourceTree = "<group>"; };
 		88DCAD441CB87CB400C018AF /* TitledSupplementaryViewFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitledSupplementaryViewFactoryTests.swift; sourceTree = "<group>"; };
 		88DCAD451CB87CB400C018AF /* TitledSupplementaryViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitledSupplementaryViewTests.swift; sourceTree = "<group>"; };
+		A5CC19D91FF9AE6E00DB7EE8 /* TableReorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableReorderController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				88DCAD2F1CB87CB400C018AF /* JSQDataSourcesKit.h */,
 				88DCAD331CB87CB400C018AF /* Section.swift */,
 				1DD7AC5C1D86C4BC00B676A6 /* TableEditingController.swift */,
+				A5CC19D91FF9AE6E00DB7EE8 /* TableReorderController.swift */,
 				88DCAD351CB87CB400C018AF /* TitledSupplementaryView.swift */,
 				88DCAD371CB87CB400C018AF /* TitledSupplementaryViewFactory.swift */,
 				88CFFD991CB977A100C4E9DD /* ViewFactory.swift */,
@@ -409,6 +412,7 @@
 				88DCAD741CB87CC000C018AF /* Section.swift in Sources */,
 				88B80CD81CBBF62A00EDF9D5 /* DataSourceProvider.swift in Sources */,
 				1DD7AC5D1D86C4BC00B676A6 /* TableEditingController.swift in Sources */,
+				A5CC19DC1FF9AE6E00DB7EE8 /* TableReorderController.swift in Sources */,
 				888799491D0E2D1700BBCCBC /* DataSource.swift in Sources */,
 				88DCAD781CB87CC000C018AF /* TitledSupplementaryViewFactory.swift in Sources */,
 			);
